@@ -1,0 +1,24 @@
+# Declare an empty workspace so this crate is independent of the
+# enclosing adsmt workspace it sits inside as a submodule.
+[workspace]
+
+[package]
+name = "oxiz-contrib-abduction"
+version = "0.1.0"
+edition = "2024"
+license = "Apache-2.0"
+description = "Solver-agnostic abductive-reasoning trait surface for the OxiZ ecosystem"
+repository = "https://github.com/newsniper-org/oxiz-contrib-abduction"
+readme = "README.md"
+keywords = ["smt", "abduction", "abductive", "logic", "oxiz"]
+categories = ["algorithms", "science"]
+
+[features]
+default = []
+# Optional adapter that lets `oxiz_sat::Solver` plug into the
+# AbductiveBackend trait. Off by default so the trait surface stays
+# usable in environments where pulling in oxiz-sat is undesirable.
+oxiz-sat = ["dep:oxiz-sat"]
+
+[dependencies]
+oxiz-sat = { version = "0.2", optional = true }

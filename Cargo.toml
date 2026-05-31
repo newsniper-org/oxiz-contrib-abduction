@@ -12,6 +12,7 @@ repository = "https://github.com/newsniper-org/oxiz-contrib-abduction"
 readme = "README.md"
 keywords = ["smt", "abduction", "abductive", "logic", "oxiz"]
 categories = ["algorithms", "science"]
+rust-version = "1.96"
 
 [features]
 default = []

@@ -14,8 +14,17 @@ use oxiz_contrib_abduction::{abduce, AbductiveBackend, Hypothesis, Verdict};
 
 ## Status
 
-- 0.1.x: trait surface stable for the use cases adsmt drives. API
-  may evolve before a 1.0 promotion.
+- 0.1.x line — current.
+- **Trait surface verified against adsmt v1.0.0-rc.2**
+  (2026-05-31). The shape (`AbductiveBackend` trait, the
+  `Hypothesis<T>` / `HypothesisSet<T>` model, the `abduce`
+  driver) is consumed by adsmt's `adsmt-abduce` crate without
+  adapter layers; the next adsmt cycle that introduces a new
+  shape requirement opens a 0.1.x patch here. **No
+  breaking-change is queued for the 0.1.x line; a 1.0
+  promotion will happen alongside the OxiZ-side
+  first-party-promotion decision (offered to `cool-japan/oxiz`
+  per §Governance below).**
 - Apache-2.0, matching `cool-japan/oxiz` upstream.
 
 ## Governance
